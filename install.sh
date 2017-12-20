@@ -23,4 +23,4 @@ elif [ -e $USER_TMUX_CONF ]; then
     mv $USER_TMUX_CONF $GIT_DIR/old-config/.tmux.conf.old
 fi
 
-ln -s /home/zhammer1/mbig/personal/hmux/.tmux.conf ~/.tmux.conf
+ln -s $GIT_DIR/.tmux.conf ~/.tmux.conf
