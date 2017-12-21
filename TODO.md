@@ -4,3 +4,4 @@
       * This is due to tmux caching previous shell call...
   * Join window to previous window (if only one pane)
   * C-g universal cancel
+  * C-1 close all other panes
