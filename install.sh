@@ -24,3 +24,7 @@ elif [ -e $USER_TMUX_CONF ]; then
 fi
 
 ln -s $GIT_DIR/.tmux.conf ~/.tmux.conf
+
+echo "hmux installation complete!"
+echo "Any previous '~/.tmux.conf' file has been moved to 'old-config/'"
+echo "Source 'tx.sh' or append to '~/.bash_profile' for some extra tmux shortcuts."
