@@ -1,6 +1,5 @@
 # TODO
   * C-g universal cancel
-  * C-1 close all other panes
   * Help mode to show current variablesh
   * Fix switch to number window
   * Fixup mouse stuff
@@ -12,6 +11,8 @@
           * F     formats
           * show window options
           * show options
+          * environment
+          * hooks
       * Python script to gen
       * How would i quit out of this menu?
           * I could add a hook to send-keys 'q' for quit
