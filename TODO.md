@@ -5,12 +5,13 @@
   * Fix switch to number window
   * Fixup mouse stuff
   * Copy/paste to system
-  * Better adaptation of pencil light to tmux
   * C-x g:  Bold man-page style dividor for GIT DIFF and GIT STATUS
   * Help doc generator
       * You have typed C-h, the help character. Type a Help option:
           * c     Commands
           * F     formats
+          * show window options
+          * show options
       * Python script to gen
       * How would i quit out of this menu?
           * I could add a hook to send-keys 'q' for quit
