@@ -1,5 +1,5 @@
 # TODO
-  * C-g universal cancel
+  * C-g to cancel out of command prompt
   * Help mode to show current variablesh
   * Fixup mouse stuff
   * Copy/paste to system
