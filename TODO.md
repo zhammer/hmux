@@ -1,8 +1,6 @@
 # TODO
   * C-g universal cancel
   * Help mode to show current variablesh
-  * Fix switch to number window
-      * Maybe make a SWITCH-WINDOW table mode C-w
   * Fixup mouse stuff
   * Copy/paste to system
   * C-x g:  Bold man-page style dividor for GIT DIFF and GIT STATUS
