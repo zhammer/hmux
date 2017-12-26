@@ -1,5 +1,6 @@
 # TODO
   * C-g to cancel out of command prompt
+  * Flexible status session name size -- right now gets cut off
   * Help mode to show current variablesh
   * Fixup mouse stuff
   * Copy/paste to system
