@@ -3,7 +3,7 @@
 # Sourceable bash functions / aliases for simplifying tmux shell commands.
 
 # Attach to tmux session SESSION_NAME if it exists, otherwise create a new session.
-tx () {
+function tx {
     SESSION_NAME=$1
     tmux ls | grep "^${SESSION_NAME}:"
     if [ $? -ne 0 ]; then
