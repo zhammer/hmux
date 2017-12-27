@@ -1,11 +1,9 @@
 # TODO
   * Fix C-x 1 (kill other panes) to work for linux AND mac
-  * C-g to cancel out of command prompt
   * Flexible status session name size -- right now gets cut off
-  * Help mode to show current variablesh
-  * Fixup mouse stuff
+      * Maybe just a little longer?
   * Copy/paste to system
-  * C-x g:  Bold man-page style dividor for GIT DIFF and GIT STATUS
+  * C-x g: Can i use git status -vv with diff color?
   * Help doc generator
       * You have typed C-h, the help character. Type a Help option:
           * c     Commands
