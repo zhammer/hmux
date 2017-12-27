@@ -1,6 +1,5 @@
 # TODO
   * Fix C-x 1 (kill other panes) to work for linux AND mac
-  * tx ls special arg
   * C-g to cancel out of command prompt
   * Flexible status session name size -- right now gets cut off
   * Help mode to show current variablesh
