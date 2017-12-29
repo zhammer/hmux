@@ -1,5 +1,4 @@
 # TODO
-  * Fix C-x 1 (kill other panes) to work for linux AND mac
   * Flexible status session name size -- right now gets cut off
       * Maybe just a little longer?
   * Copy/paste to system
