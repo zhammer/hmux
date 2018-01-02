@@ -1,4 +1,5 @@
 # TODO
+  * tx -- when in a tmux session -- should switch b/w sessions
   * Flexible status session name size -- right now gets cut off
       * Maybe just a little longer?
   * Copy/paste to system
