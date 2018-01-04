@@ -1,30 +1,23 @@
 #!/usr/bin/env bash
 #
 # Install hmux's config file by creating a symlink from
-# ~/.tmux.conf -> $GIT_DIR/.tmux.conf.
-# If there is already a ~/.tmux.conf file, save that config
-# in $GIT_DIR/old-config. (If the current ~/.tmux.conf is a
-# symlink, the symlinks target file will be copied.)
+# ~/.tmux.conf -> ~/.tmux.d/.tmux.conf.
+# If there is already a ~/.tmux.conf file, rename it
+# to ~/.tmux.conf.old.{timestamp}
 
-GIT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-USER_TMUX_CONF=~/.tmux.conf
-HMUX_CONF="$GIT_DIR/.tmux.conf"
-
-# ~/.tmux.conf exists, and it is a symlink
-if [ -h $USER_TMUX_CONF ]; then
-    mkdir $GIT_DIR/old-config
-    TARGET_FILE=$(readlink $USER_TMUX_CONF)
-    cp $TARGET_FILE $GIT_DIR/old-config/.tmux.conf.old
-    rm -f $USER_TMUX_CONF
-# ~/.tmux.conf exists, and it is not a symlink
-elif [ -e $USER_TMUX_CONF ]; then
-    mkdir $GIT_DIR/old-config
-    mv $USER_TMUX_CONF $GIT_DIR/old-config/.tmux.conf.old
+if [ ! -e ~/.tmux.d/.tmux.conf ]; then
+    echo "hmux must be cloned into ~/.tmux.d for install.sh to work."
+    return
 fi
 
-ln -s $GIT_DIR/.tmux.conf ~/.tmux.conf
+OLD_TMUX_RENAME=~/.tmux.conf.old.$(date +%Y%m%d%H%M%S)
+if [ -e ~/.tmux.conf ]; then
+    mv ~/.tmux.conf $OLD_TMUX_RENAME
+    echo "Renamed existing '~/.tmux.conf' to '$OLD_TMUX_RENAME'."
+fi
 
+ln -s ~/.tmux.d/.tmux.conf ~/.tmux.conf
+
+echo
 echo "hmux installation complete!"
-echo "Any previous '~/.tmux.conf' file has been moved to 'old-config/'"
-echo "Source 'tx.sh' or append to '~/.bash_profile' for some extra tmux shortcuts."
+echo "Source '~/.tmux.d/tx.sh' or append it to '~/.bash_profile' for some extra tmux shortcuts."
