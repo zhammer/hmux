@@ -2,7 +2,7 @@
 An ```emacs```-inspired configuration of ```tmux```.
 
 ### Overview
-```hmux``` is an ```emacs```-inspired configuration of ```tmux``` that also comes along with a few bash functions to make ```tmux``` more accessible. If you use ```vim``` or another editor and want an easy-to-switch-to ```tmux```, ```hmux```'s [.tmux.conf](.tmux.conf) file should be good a starting place to start switching over useful ```tmux``` commands to your familiar bindings.
+```hmux``` is an ```emacs```-inspired configuration of ```tmux``` that also comes along with a few helpful bash functions to make ```tmux``` more accessible. If you use ```vim``` or another editor and want an easy-to-switch-to ```tmux```, ```hmux```'s [.tmux.conf](.tmux.conf) file should be good a starting place to start switching over useful ```tmux``` commands to your familiar bindings.
 
 While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does come with a surprising amount of customizable variables, hooks and bindings. The ```C-h``` help prefix key should come in handy for anyone who wants to play around with their ```tmux``` conf.
 
@@ -56,3 +56,7 @@ While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does c
 * ```C-x z``` zoom pane
     * 'Zoom in' on the current pane, making it full screen until the ```C-x z``` is entered again
     * tmux command: ```resize-pane -Z```
+    
+### Learning tmux
+I read [Brian Hogan](https://github.com/napcs)'s [tmux 2](https://pragprog.com/book/bhtmux2/tmux-2) reference book in one afternoon at work after I'd spent a day juggling 5 shell windows to simultaneously start/stop a service, read its logs and run scripts on its data. It's a great book and a really quick read.
+```tmux``` is a overall a great tool; the only major hurdle is the key bindings which are not always super convenient. Hopefully ```hmux``` can make that transition easier.
