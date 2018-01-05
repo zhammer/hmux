@@ -9,17 +9,6 @@ While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does c
 ### Installation
 ```git clone https://github.com/zhammer/hmux.git ~/.tmux.d ; ~/.tmux.d/install.sh``` should be all you need to install ```hmux``` and be able to pull from and push to github.
 
-### Bash functions ([tx.sh](tx.sh))
-* ```tx ls```
-    * List all sessions on the default tmux server (```tmux ls```).
-* ```tx {session_name}```
-    * If called from outside a tmux client:
-         * Attach to ```{session_name}``` if it exists, otherwise create a new session called ```{session_name}``` and attach to it.
-    * If called from inside a tmux client:
-         * Switch to ```{session_name}``` if it exists, otherwise print an error message.
-* ```txk {session_name}```
-    * Kill ```{session_name}```.
-
 ### Emacs-inspired bindings
 * ```C-x-``` global prefix key
     * In ```hmux```, the default ```tmux``` prefix key is switched from ```C-b``` to ```C-x``` to match the prefix key of ```emacs```.
@@ -56,6 +45,18 @@ While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does c
 * ```C-x z``` zoom pane
     * 'Zoom in' on the current pane, making it full screen until the ```C-x z``` is entered again
     * tmux command: ```resize-pane -Z```
+
+### Bash functions ([tx.sh](tx.sh))
+* ```tx ls```
+    * List all sessions on the default tmux server (```tmux ls```).
+* ```tx {session_name}```
+    * If called from outside a tmux client:
+         * Attach to ```{session_name}``` if it exists, otherwise create a new session called ```{session_name}``` and attach to it.
+    * If called from inside a tmux client:
+         * Switch to ```{session_name}``` if it exists, otherwise print an error message.
+* ```txk {session_name}```
+    * Kill ```{session_name}```.
+
     
 ### Learning tmux
 I read [Brian Hogan](https://github.com/napcs)'s [tmux 2](https://pragprog.com/book/bhtmux2/tmux-2) reference book in one afternoon at work after I'd spent a day juggling 5 shell windows to simultaneously start/stop a service, read its logs and run scripts on its data. It's a great book and a really quick read.
