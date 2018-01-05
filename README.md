@@ -2,9 +2,11 @@
 An ```emacs```-inspired configuration of ```tmux```.
 
 ### Overview
-```hmux``` is an ```emacs```-inspired configuration of ```tmux``` that also comes along with a few helpful bash functions to make ```tmux``` more accessible. If you use ```vim``` or another editor and want an easy-to-switch-to ```tmux```, ```hmux```'s [.tmux.conf](.tmux.conf) file should be good a starting place to start switching over useful ```tmux``` commands to your familiar bindings.
+```hmux``` is an ```emacs```-inspired configuration of ```tmux``` that also comes along with a few helpful bash functions to make ```tmux``` more accessible.
 
 While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does come with a surprising amount of customizable variables, hooks and bindings. The ```C-h``` help prefix key should come in handy for anyone who wants to play around with their ```tmux``` conf.
+
+If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux``` configuration, ```hmux```'s [.tmux.conf](.tmux.conf) file should be good a starting place to start switching over useful ```tmux``` bindings to your familiar keys.
 
 ### Installation
 ```git clone https://github.com/zhammer/hmux.git ~/.tmux.d ; ~/.tmux.d/install.sh``` should be all you need to install ```hmux``` and be able to pull from and push to github.
