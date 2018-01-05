@@ -4,12 +4,14 @@ An ```emacs```-inspired configuration of ```tmux```.
 ### Overview
 ```hmux``` is an ```emacs```-inspired configuration of ```tmux``` that also comes along with a few helpful bash functions to make ```tmux``` more accessible.
 
-While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does come with a surprising amount of customizable variables, hooks and bindings. The ```C-h``` help prefix key should come in handy for anyone who wants to play around with their ```tmux``` conf.
+While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does come with a surprising amount of customizable variables, hooks and bindings. The ```C-h``` help prefix key should come in handy for anyone who wants to play around with their ```tmux``` config.
 
-If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux``` configuration, ```hmux```'s [.tmux.conf](.tmux.conf) file should be good a starting place to start switching over useful ```tmux``` bindings to your familiar keys.
+If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux``` configuration, ```hmux```'s [.tmux.conf](.tmux.conf) file should be good a starting place to begin switching over useful ```tmux``` bindings to your familiar keys.
 
 ### Installation
-```git clone https://github.com/zhammer/hmux.git ~/.tmux.d ; ~/.tmux.d/install.sh``` should be all you need to install ```hmux``` and be able to pull from and push to github.
+```git clone https://github.com/zhammer/hmux.git ~/.tmux.d ; ~/.tmux.d/install.sh``` should be all you need to install ```hmux``` and be able to pull from and push to github. This will clone ```hmux``` into ```~/.tmux.d``` and create a symlink linking ```~/.tmux.conf -> ~/.tmux.d/.tmux.conf```. The [install.sh](install.sh) script will rename any current ```~/.tmux.conf``` file to ```~/.tmux.conf.old.{timestamp}``` so you don't lose old configurations.
+
+*You can also just clone the ```hmux``` repo and hard copy ```hmux/.tmux.conf``` to ```~/.tmux.conf``` if you don't want to setup ```~/.tmux.d``` and the symlinking, though it'll be harder to pull in github updates and you won't have a centralized, easy-to-access ```tmux``` directory.*
 
 ### Emacs-inspired bindings
 * ```C-x-``` global prefix key
@@ -38,7 +40,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 * ```C-x M-(Up|Down|Left|Right)``` quick resize
 * ```M-t``` open new window in ~/.tmux.d
 * ```C-b [0-9]``` switch to window ```[0-9]```
-    * (Emacs bindings overwrite some of the default ```C-x 0-9``` bindings)
+    * (Emacs bindings overwrite some of the default ```C-x 0-9``` switch to window bindings)
 
 ### Helpful tmux bindings / commands
 * ```C-x s``` choose session
