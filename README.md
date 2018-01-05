@@ -40,7 +40,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 * ```C-x M-(Up|Down|Left|Right)``` quick resize
 * ```M-t``` open new window in ~/.tmux.d
 * ```C-b [0-9]``` switch to window ```[0-9]```
-    * (Emacs bindings overwrite some of the default ```C-x 0-9``` switch to window bindings)
+    * (```hmux```'s ```emacs``` bindings overwrite some of the default ```C-x 0-9``` switch to window bindings)
 
 ### Helpful tmux bindings / commands
 * ```C-x s``` choose session
