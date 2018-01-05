@@ -10,7 +10,7 @@
           * show options
           * environment
           * hooks
-      * Python script to gen
+      * Python/bash script to gen
       * How would i quit out of this menu?
           * I could add a hook to send-keys 'q' for quit
           * Or just don't allow pressing keys from that window
