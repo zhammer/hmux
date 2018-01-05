@@ -63,6 +63,6 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 
     
 ### Learning tmux
-I read [Brian Hogan](https://github.com/napcs)'s [tmux 2](https://pragprog.com/book/bhtmux2/tmux-2) reference book in one afternoon at work after I'd spent a day juggling 5 shell windows to simultaneously start/stop a service, read its logs and run scripts on its data. It's a great book and a really quick read.
+I read [Brian Hogan](https://github.com/napcs)'s [tmux 2](https://pragprog.com/book/bhtmux2/tmux-2) reference book in one afternoon at work after I'd spent a day juggling 5 shell windows to simultaneously start/stop a service, read its logs and run scripts on its data. The next day I was doing the same thing -- albeit a lot more easily -- in ```tmux```. **tmux 2** is a great book and a really quick read.
 
-```tmux``` is overall a great tool; the only major hurdle is the key bindings which are not always super convenient. Hopefully ```hmux``` can make that transition easier.
+```tmux``` is a great tool; the only major hurdle is the key bindings which are not always super convenient. Hopefully ```hmux``` can make that transition easier.
