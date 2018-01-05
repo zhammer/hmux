@@ -46,8 +46,8 @@ While ```tmux``` is not nearly as customizable as ```emacs```, ```tmux``` does c
 * ```M-]``` paste buffer
 * ```C-x M-(Up|Down|Left|Right)``` quick resize
 * ```M-t``` open new window in ~/.tmux.d
-* ```C-b [0-9]``` switch to window [0-9]
-    * (Emacs bindings overwrite some of the default * ```C-x 0-9``` bindings)
+* ```C-b [0-9]``` switch to window ```[0-9]```
+    * (Emacs bindings overwrite some of the default ```C-x 0-9``` bindings)
 
 ### Helpful tmux bindings / commands
 * ```C-x s``` choose session
