@@ -1,4 +1,6 @@
 # TODO
+  * Use $TMUX envar instead of (attached)$ grep to check if we are attached.
+      * Right now tx will treat as attached even if current shell is not attached, but another is.
   * Flexible status session name size -- right now gets cut off
       * Maybe just a little longer?
   * C-x g: Can i use git status -vv with diff color?
