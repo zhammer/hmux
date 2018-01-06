@@ -19,8 +19,7 @@ tx () {
     fi
 
     # If we are 'in' tmux, try to switch to the target session, fail if session doesn't exit.
-    tmux ls | grep "(attached)$" -q
-    if [ $? -eq 0 ]; then
+    if [ ! -z $TMUX ]; then
         tmux switch-client -t $SESSION_NAME
         return $?
     fi
