@@ -19,7 +19,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
     * *(This means that using ```emacs``` in the shell requires an extra ```C-x``` to send the prefix key to ```emacs```, though I dont know many people who use ```emacs``` in ```-nw``` mode)*
 * ```C-h-``` help prefix key
     * Prefix command for accessing information on active ```tmux``` key bindings and environment variables as well as ```tmux``` man-page documentation.
-    * ```C-h-?``` for more info (in progress)
+    * ```C-h-?``` for more info *(experimental)*
 * ```C-x 0``` delete current pane
     * Delete the current pane. Fails if there is only one pane in the current window.
 * ```C-x 1``` delete other panes in window
@@ -61,7 +61,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 * ```txk {session_name}```
     * Kill ```{session_name}```.
 
-    
+
 ### Learning tmux
 I read [Brian Hogan](https://github.com/napcs)'s [tmux 2](https://pragprog.com/book/bhtmux2/tmux-2) reference book in one afternoon at work after I'd spent a day juggling 5 shell windows to simultaneously start/stop a service, read its logs and run scripts on its data. The next day I was doing the same thing -- albeit a lot more easily -- in ```tmux```. **tmux 2** is a great book and a really quick read.
 
