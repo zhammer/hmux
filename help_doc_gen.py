@@ -6,6 +6,13 @@ import sys
 
 # Extract regex(es)
 CONF_HELP_LINE_RE = r'bind -T HELP (\w) (.*)\s+(?:#\s+(.*))'
+# TODO: When the description capture group (?:#\s+(.*)) is optional, the command
+# capture group (.*) greedily extends to the end of the line. I tried to fix this
+# by making the command capture group ([^#*]), so that the command capture forcibly
+# ends right at the # docstring signifier. This, however, breaks any tmux command that
+# used the tmux formatting style (ex: #{window_name}). I tried a lazy qualifier (.*?)
+# but that doesn't work. Is there a way to keep docstring capture group optional, but
+# also have the command (.*) include all characters up to that group then end?
 
 # Output formatters
 HELP_PAGE_LINE_FMT = '{key:<8}{doc}'
