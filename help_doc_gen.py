@@ -5,7 +5,7 @@ import re
 import sys
 
 # Extract regex(es)
-CONF_HELP_LINE_RE = r'bind -T HELP (\w) (.*)\s+(?:#\s+(.*))'
+CONF_HELP_LINE_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
 # TODO: When the description capture group (?:#\s+(.*)) is optional, the command
 # capture group (.*) greedily extends to the end of the line. I tried to fix this
 # by making the command capture group ([^#*]), so that the command capture forcibly
