@@ -28,7 +28,7 @@ def extract_conf_file_help_bindings(conf_file):
 
 def sort_help_lines_by_key(help_lines):
     """Sort a list of help lines alphabetically by key."""
-    return sorted(help_lines, key=lambda x: (x.key.lower(), x.key))
+    return sorted(help_lines, key=lambda x: x.key.lower())
 
 
 def format_help_line(helpline):
