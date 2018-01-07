@@ -38,8 +38,8 @@ def format_help_line(helpline):
         doc=(helpline.docstring or helpline.command)
     )
 
-
-if __name__ == '__main__':
+def main():
+    """Main"""
     conf_file = sys.argv[1]
     help_lines = extract_conf_file_help_bindings(conf_file)
     help_lines = sort_help_lines_by_key(help_lines)
@@ -47,3 +47,7 @@ if __name__ == '__main__':
     print(HELP_PAGE_HEADER + '\n')
     for help_line in help_lines:
         print(format_help_line(help_line))
+
+
+if __name__ == '__main__':
+    main()
