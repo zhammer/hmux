@@ -5,7 +5,7 @@ import re
 import sys
 
 # Extract regex(es)
-CONF_HELP_LINE_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
+CONF_HELP_BINDING_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
 # TODO: When the description capture group (?:#\s+(.*)) is optional, the command
 # capture group (.*) greedily extends to the end of the line. I tried to fix this
 # by making the command capture group ([^#*]), so that the command capture forcibly
@@ -17,36 +17,36 @@ CONF_HELP_LINE_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
 # Output formatters
 HELP_PAGE_LINE_FMT = '{key:<8}{doc}'
 HELP_PAGE_HEADER = 'You have typed C-h, the help character. Type a Help option:'
-HelpLine = collections.namedtuple('HelpLine', 'key command docstring')
+HelpBinding = collections.namedtuple('HelpBinding', 'key command docstring')
 
 def extract_conf_file_help_bindings(conf_file):
     """Extract all lines in our config that are help key bindings and return them as aa list of
-    HelpLine namedtuples."""
+    HelpBinding namedtuples."""
     with open(conf_file) as lines:
-        return [HelpLine(*re.match(CONF_HELP_LINE_RE, line).groups()) for line in lines
-                if re.match(CONF_HELP_LINE_RE, line)]
+        return [HelpBinding(*re.match(CONF_HELP_BINDING_RE, line).groups()) for line in lines
+                if re.match(CONF_HELP_BINDING_RE, line)]
 
-def sort_help_lines_by_key(help_lines):
-    """Sort a list of help lines alphabetically by key."""
-    return sorted(help_lines, key=lambda x: x.key.lower())
+def sort_help_bindings_by_key(help_bindings):
+    """Sort a list of help bindings alphabetically by key."""
+    return sorted(help_bindings, key=lambda x: x.key.lower())
 
 
-def format_help_line(helpline):
-    """Format a HelpLine namedtuple for output to the hmux help page."""
+def format_help_binding(help_binding):
+    """Format a HelpBinding namedtuple for output to the hmux help page."""
     return HELP_PAGE_LINE_FMT.format(
-        key=helpline.key,
-        doc=(helpline.docstring or helpline.command)
+        key=help_binding.key,
+        doc=(help_binding.docstring or help_binding.command)
     )
 
 def main():
     """Main"""
     conf_file = sys.argv[1]
-    help_lines = extract_conf_file_help_bindings(conf_file)
-    help_lines = sort_help_lines_by_key(help_lines)
+    help_bindings = extract_conf_file_help_bindings(conf_file)
+    help_bindings = sort_help_bindings_by_key(help_bindings)
 
     print(HELP_PAGE_HEADER + '\n')
-    for help_line in help_lines:
-        print(format_help_line(help_line))
+    for help_binding in help_bindings:
+        print(format_help_binding(help_binding))
 
 
 if __name__ == '__main__':
