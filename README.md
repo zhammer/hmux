@@ -49,6 +49,9 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 * ```C-x z``` zoom pane
     * 'Zoom in' on the current pane, making it full screen until the ```C-x z``` is entered again
     * tmux command: ```resize-pane -Z```
+* ```C-x C-o``` rotate window
+    * Rotate panes in the window
+    * tmux command: ```rotate-window```
 
 ### Bash functions ([tx.sh](tx.sh))
 * ```tx ls```
