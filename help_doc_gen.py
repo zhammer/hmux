@@ -4,19 +4,12 @@ import collections
 import re
 import sys
 
-# Extract regex(es)
+# Config help binding extraction regex
 CONF_HELP_BINDING_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
-# TODO: When the description capture group (?:#\s+(.*)) is optional, the command
-# capture group (.*) greedily extends to the end of the line. I tried to fix this
-# by making the command capture group ([^#*]), so that the command capture forcibly
-# ends right at the # docstring signifier. This, however, breaks any tmux command that
-# used the tmux formatting style (ex: #{window_name}). I tried a lazy qualifier (.*?)
-# but that doesn't work. Is there a way to keep docstring capture group optional, but
-# also have the command (.*) include all characters up to that group then end?
 
 # Output formatters
 HELP_PAGE_LINE_FMT = '{key:<8}{doc}'
-HELP_PAGE_HEADER = 'You have typed C-h, the help character. Type a Help option:'
+HELP_PAGE_HEADER = 'You have typed C-h, the help character. Type a Help option:\n(Type q to exit the Help command.)'
 HelpBinding = collections.namedtuple('HelpBinding', 'key command docstring')
 
 def extract_conf_file_help_bindings(conf_file):
@@ -35,7 +28,7 @@ def format_help_binding(help_binding):
     """Format a HelpBinding namedtuple for output to the hmux help page."""
     return HELP_PAGE_LINE_FMT.format(
         key=help_binding.key,
-        doc=(help_binding.docstring or help_binding.command)
+        doc=(help_binding.docstring)
     )
 
 def main():
