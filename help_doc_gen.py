@@ -9,7 +9,8 @@ CONF_HELP_BINDING_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
 
 # Output formatters
 HELP_PAGE_LINE_FMT = '{key:<8}{doc}'
-HELP_PAGE_HEADER = 'You have typed C-h, the help character. Type a Help option:\n(Type q to exit the Help command.)'
+HELP_PAGE_HEADER = ('You have typed C-h, the help character. Type a Help option:\n'
+                    '(Type q to exit the Help command.)')
 HelpBinding = collections.namedtuple('HelpBinding', 'key command docstring')
 
 def extract_conf_file_help_bindings(conf_file):
