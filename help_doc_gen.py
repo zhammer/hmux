@@ -5,7 +5,7 @@ import re
 import sys
 
 # Config help binding extraction regex
-CONF_HELP_BINDING_RE = r'bind -T HELP (\w) (.*)(?:\s+#\s+(.*))'
+CONF_HELP_BINDING_RE = r'bind -T HELP (\w) (.*)\s+#\s+(.*)'
 
 # Output formatters
 HELP_PAGE_LINE_FMT = '{key:<8}{doc}'
