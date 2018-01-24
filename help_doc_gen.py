@@ -28,7 +28,7 @@ def format_help_binding(help_binding):
     """Format a HelpBinding namedtuple for output to the hmux help page."""
     return HELP_PAGE_LINE_FMT.format(
         key=help_binding.key,
-        doc=(help_binding.docstring)
+        doc=help_binding.docstring
     )
 
 def main():
