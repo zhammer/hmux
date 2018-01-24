@@ -21,7 +21,7 @@ def extract_help_bindings(tmux_conf_lines):
 
 def sort_help_bindings_by_key(help_bindings):
     """Sort a list of help bindings alphabetically by key."""
-    return sorted(help_bindings, key=lambda x: x.key.lower())
+    return sorted(help_bindings, key=lambda help_binding: help_binding.key.lower())
 
 
 def format_help_binding(help_binding):
