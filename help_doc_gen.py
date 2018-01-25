@@ -17,7 +17,7 @@ def extract_help_bindings(tmux_conf_lines):
     """Extract all lines in an iterable of tmux config lines that are help key bindings and return
     them as a list of HelpBinding namedtuples."""
     return [HelpBinding(*re.match(CONF_HELP_BINDING_RE, line).groups()) for line in tmux_conf_lines
-                if re.match(CONF_HELP_BINDING_RE, line)]
+            if re.match(CONF_HELP_BINDING_RE, line)]
 
 def sort_help_bindings_by_key(help_bindings):
     """Sort a list of help bindings alphabetically by key."""

@@ -39,8 +39,10 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 * ```M-]``` paste buffer
 * ```C-x M-(Up|Down|Left|Right)``` quick resize
 * ```M-t``` open new window in ~/.tmux.d
-* ```C-x Y``` toggle sYnchronized-panes
+* ```C-x Y``` toggle s**Y**nchronized-panes
     * When ```synchronized-panes``` is on, tmux will mirror keyboard input to all panes in the active window.
+* ```C-x a``` monitor-**a**ctivity
+    * When ```monitor-activity``` is on, windows in a session that have updated will display as highlighted in the status bar. (This behavior can be customized, see: the ```visual-activity``` window option.)
 * ```C-b [0-9]``` switch to window ```[0-9]```
     * (```hmux```'s ```emacs``` bindings overwrite some of the default ```C-x 0-9``` switch to window bindings)
 
