@@ -38,7 +38,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 * ```M-[``` copy mode
 * ```M-]``` paste buffer
 * ```C-x M-(Up|Down|Left|Right)``` quick resize
-* ```M-t``` open new window in ~/.tmux.d
+* ```M-T``` open new window in ~/.tmux.d
 * ```C-x Y``` toggle s**Y**nchronized-panes
     * When ```synchronized-panes``` is on, tmux will mirror keyboard input to all panes in the active window.
 * ```C-x a``` monitor-**a**ctivity
