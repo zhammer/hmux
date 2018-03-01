@@ -45,6 +45,9 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
     * When ```monitor-activity``` is on, windows in a session that have updated will display as highlighted in the status bar. (This behavior can be customized, see: the ```visual-activity``` window option.)
 * ```C-b [0-9]``` switch to window ```[0-9]```
     * (```hmux```'s ```emacs``` bindings overwrite some of the default ```C-x 0-9``` switch to window bindings)
+* ```C-x b``` choose-buffer
+    * All text saved to clipboard iin tmux is saved to an ```emacs```-style kill-ring
+* ```C-x W``` rename-window
 
 ### Helpful tmux bindings / commands
 * ```C-x s``` choose session
