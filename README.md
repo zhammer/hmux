@@ -16,7 +16,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
 ### Emacs-inspired bindings
 * ```C-x-``` global prefix key
     * In ```hmux```, the default ```tmux``` prefix key is switched from ```C-b``` to ```C-x``` to match the prefix key of ```emacs```.
-    * *(This means that using ```emacs``` in the shell requires an extra ```C-x``` to send the prefix key to ```emacs```, though I dont know many people who use ```emacs``` in ```-nw``` mode)*
+    * *(This means that using ```emacs``` in the shell requires an extra ```C-x``` to send the prefix key to ```emacs```, though I dont know many people who use ```emacs``` in ```-nw``` mode. If this is an issue, you can ```set -g prefix``` to another key.)*
 * ```C-h-``` help prefix key
     * Prefix command for accessing information on active ```tmux``` key bindings and environment variables as well as ```tmux``` man-page documentation.
     * ```C-h-?``` for more info *(experimental)*
