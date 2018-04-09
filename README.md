@@ -30,6 +30,7 @@ If you use ```vim``` or another editor and want to setup an easy-to-use ```tmux`
     * Split the current pane horizontally so that the new pane to the right is in the current pane's directory.
 * ```C-x k``` kill pane (y/n)
 * ```M-x AND M-:``` command prompt
+    * *Again, this conflicts with the ```emacs``` bindings if running in ```-nw``` mode. ```prefix M-x``` and ```prefix M-:``` will send ```M-x``` and ```M-:``` to ```emacs``` in shell. If inconvenient, I recommend changing these bindings.*
 * ```C-x g``` magit-lite
     * If inside a git repo, view the colorized git diff and status in a new window.
 
